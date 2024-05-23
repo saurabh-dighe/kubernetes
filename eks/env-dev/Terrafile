@@ -1,0 +1,6 @@
+eks:
+  source: "https://gitlab.com/thecloudcareers/tf-modules-eks.git"
+  version: "main"
+
+
+
