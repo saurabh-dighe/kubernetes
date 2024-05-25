@@ -12,4 +12,15 @@ metadata:
 spec:
   containers:
   - name: nginx-cnt
-    image: nginx:latest
+    image: nginx:latest 
+
+--- 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd-pod
+spec:
+  containers:
+  - name: httpd-cnt
+    image: httpd:latest 
