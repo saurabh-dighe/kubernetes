@@ -5,14 +5,14 @@
 # spec:
 #   containers: 
 
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod
-spec:
-  containers:
-  - name: nginx-cnt
-    image: nginx:latest 
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: nginx-pod
+# spec:
+#   containers:
+#   - name: nginx-cnt
+#     image: nginx:latest 
 
 --- 
 
