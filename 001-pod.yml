@@ -16,14 +16,14 @@ spec:
 
 --- 
 
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: httpd-pod
-# spec:
-#   containers:
-#   - name: httpd-cnt
-#     image: httpd:latest 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd-pod
+spec:
+  containers:
+  - name: httpd-cnt
+    image: httpd:latest 
 
 
   
