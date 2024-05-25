@@ -6,7 +6,7 @@
 ```
     1) Master Nodes 
 
-    2) Worked Nodes 
+    2) Worker Nodes 
 
     3) Control Pane 
 
@@ -14,9 +14,9 @@
 
     5) Node Pool or Node Group
 
-    6) Kubectl 
+    6) kubectl 
 
-    7) Kubelet 
+    7) kubelet 
 
     8) Control Pane and Data Pane Components
 ```

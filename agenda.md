@@ -1,4 +1,4 @@
-    1) PODS
+    1) PODS             
     2) ENV 
     3) CMD 
     4) ConfigMap 
@@ -27,3 +27,15 @@
         d) External         ( It's just like a CNAME to a long name to service in the K8 Cluster )
 
     11) Pod Priority & Pre-emption  
+
+
+### How can we create the resources in kubernetes ?
+
+    1) Imperative Way   ( By directly running the commands )
+    2) Declarative Way  ( By using YAML : So that all the changes can be captured : Production Grade )
+
+
+### Pod :
+    1) Smallest resource that you can create on Kubernetes.
+    2) A pod is a wrapper to a container 
+    3) A pod can have/run multiple containers 
