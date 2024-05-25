@@ -137,9 +137,9 @@
 ```
 
 
-### create vs update ?
+### create vs apply ?
 ```
-    create : creates the resources if the resource is not available. ( cannot update the values if the resource is already there .)
+    create : creates the resources if the resource is not available. ( cannot update the values if the resource is already there)
 
     apply  : apply can create the resouce and at the same time if the resource is already available, then it's going to upadte the value if you want.
 ```
