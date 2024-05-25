@@ -9,9 +9,11 @@ EKS is a managed kubernetes solution on AWS. Which is very powerful, available a
 
 ### EKS Cluster can be created in any of the following ways of your choice :
 ```
+
     1) Sign in to EKS Console and do all the steps manually ( which is really lengthy )
     2) EKSCTL
     3) Terraform
+
 ```
 
 Among all EKSCTL and TERRAFORM are the most convinient ways.
@@ -34,7 +36,7 @@ Let's see how can we use EKSCTL to provision the ELS CLuster
 
    Here is how the final command should look like
 
-    $ eksctl create cluster --name clusterName --version 1.22 --region us-east-1 --nodegroup-name k8-ng --node-type t3.micro --nodes 2
+    $ eksctl create cluster --name clusterName --version 1.28 --region us-east-1 --nodegroup-name k8-ng --node-type t3.micro --nodes 2
 
     $ kubectl get nodes 
 
@@ -60,3 +62,11 @@ Ref YouTube Video :
 ```
 https://youtu.be/lTLxQJ3gUwU
 ```
+
+
+
+
+
+
+kubectl get/describe  resource
+kubectl get nodes
