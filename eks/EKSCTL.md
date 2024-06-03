@@ -11,7 +11,7 @@ EKS is a managed kubernetes solution on AWS. Which is very powerful, available a
 ```
     1) Sign in to EKS Console and do all the steps manually ( which is really lengthy )
     2) EKSCTL
-    3) Terraform
+    3) Terraform  
 ```
 
 Among all EKSCTL and TERRAFORM are the most convinient ways.

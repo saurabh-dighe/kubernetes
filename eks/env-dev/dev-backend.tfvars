@@ -1,6 +1,3 @@
-bucket  = "b57-tf-state-bucket"
-key     = "eks/dev/terraform.tfstate"
-region  = "us-east-1"
-
-
-
+bucket   = "saurabh-bucket-tf1"
+key      = "dev/tf-databases/teraform.tfstate"
+region   = "us-east-1"
