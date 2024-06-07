@@ -10,4 +10,4 @@ spec:
 
   - name: centos-cnt
     image: centos:7
-    command: ['sleep' , "600"]  
+    # command: ['sleep' , "600"]  
