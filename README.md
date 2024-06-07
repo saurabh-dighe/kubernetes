@@ -96,7 +96,7 @@
 ### Why kubernetes is also referred as K8's ?
 
 
-### How can we created resources in Kubernetes ?
+### How can we create resources in Kubernetes ?
 
 ```
     It can created in 2 ways :
@@ -105,12 +105,16 @@
 ```
 
 
-### Ho2w can we authenticat to kubernetes cluster ?
+### How can we authenticat to kubernetes cluster ?
+
 
 ```
     $ aws eks update-kubeconfig --name clusterName
 ```
+### How to check where u connected to kubernetes cluster or not?
 
+      kubectl config current-context
+      kubectl describe pod PODNAME
 
 ### What is the structued of Kubernetes Commands ?
 
