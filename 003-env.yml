@@ -12,7 +12,7 @@ spec:
       - name: Manager
         value: "Saurabh"  
       - name: age
-        value: 26
+        value: "26"
       - name: BU
         value: "payment"
 
