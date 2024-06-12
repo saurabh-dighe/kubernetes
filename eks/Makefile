@@ -8,4 +8,4 @@ destroy:
 	@terraform init -backend-config=env-dev/dev-backend.tfvars -reconfigure
 	@terraform destroy -auto-approve -var-file=env-dev/dev.tfvars
 nothing:
-	@echo "nothing"
+	@echo "nothing - nothing"
