@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: nginx-cnter
+    image: nginx:latest 
+    ports:
+      - containerPort: 80
+    env:
+      - name: Manager
+        value: "Saurabh"  
+      - name: age
+        value: 26
+      - name: BU
+        value: "payment"
+
+  
