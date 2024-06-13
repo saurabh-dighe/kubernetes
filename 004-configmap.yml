@@ -47,3 +47,22 @@ spec:
       - name: Owner
         value: "SD"
 
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+spec:
+  containers:
+  - name: nginx-ctr
+    image: nginx:latest 
+    ports:
+      - containerPort: 80
+    envFrom:
+      - configMapRef:
+          name: cm
+    env:
+      - name: name
+        value: "Saurabh"  
+      - name: Owner
+        value: "Dighe"
