@@ -7,3 +7,25 @@ data:
   age: "26"
   name: "Saurabh"
   ENV: "Dev"
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: nginx-cnter
+    image: nginx:latest 
+    ports:
+      - containerPort: 80
+        envFrom:
+      - configMapRef:
+          name: cm
+    env:
+      - name: Manager
+        value: "Saurabh"  
+
+  
+
