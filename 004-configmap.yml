@@ -27,5 +27,23 @@ spec:
       - name: Manager
         value: "Saurabh"  
 
-  
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: payment
+spec:
+  containers:
+  - name: nginx-ctr
+    image: nginx:latest 
+    ports:
+      - containerPort: 80
+    envFrom:
+      - configMapRef:
+          name: cm
+    env:
+      - name: AppName
+        value: "Payment"  
+      - name: Owner
+        value: "SD"
 
