@@ -42,27 +42,7 @@ spec:
       - configMapRef:
           name: cm
     env:
-      - name: AppName
-        value: "Payment"  
-      - name: Owner
-        value: "SD"
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: frontend
-spec:
-  containers:
-  - name: nginx-ctr
-    image: nginx:latest 
-    ports:
-      - containerPort: 80
-    envFrom:
-      - configMapRef:
-          name: cm
-    env:
       - name: name
-        value: "Sagar"  
+        value: "Sagar"  #If u wants to override value form config map
       - name: Owner
         value: "Dighe"
