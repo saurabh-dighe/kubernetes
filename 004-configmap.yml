@@ -16,11 +16,11 @@ metadata:
   name: nginx-pod
 spec:
   containers:
-  - name: nginx-cnter
+  - name: nginx-ctr
     image: nginx:latest 
     ports:
       - containerPort: 80
-        envFrom:
+    envFrom:
       - configMapRef:
           name: cm
     env:
