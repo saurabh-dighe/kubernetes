@@ -148,6 +148,12 @@
     apply  : apply can create the resouce and at the same time if the resource is already available, then it's going to upadte the value if you want.
 ```
 
+### Types of POD status
+1. Running
+2. Restarting
+3. CrashLoopBackOff
+4. ErrorImagePull
+
 ### Do we create PODS directly on Kubernetes Cluster ???
 
 ```
