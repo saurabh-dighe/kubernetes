@@ -1,33 +1,8 @@
 #Deployment Strategy - Recreate
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
-spec:
-  replicas: 10
-  selector:
-    matchLabels:
-      app: nginx
-  strategy: 
-    type: Recreate
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:perl
-        ports:
-        - containerPort: 80
----
-#Deployment Strategy - RollingUpdate
 # apiVersion: apps/v1
 # kind: Deployment
 # metadata:
-#   name: nginx-RollingUpdate
+#   name: nginx-deployment
 #   labels:
 #     app: nginx
 # spec:
@@ -36,9 +11,7 @@ spec:
 #     matchLabels:
 #       app: nginx
 #   strategy: 
-#     type: RollingUpdate
-#     rollingUpdate:
-#      maxUnavailable: 5
+#     type: Recreate
 #   template:
 #     metadata:
 #       labels:
@@ -46,6 +19,33 @@ spec:
 #     spec:
 #       containers:
 #       - name: nginx
-#         image: nginx:stable-perl
+#         image: nginx:perl
 #         ports:
 #         - containerPort: 80
+---
+#Deployment Strategy - RollingUpdate
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-RollingUpdate
+  labels:
+    app: nginx
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+     maxUnavailable: 5
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable-perl
+        ports:
+        - containerPort: 80
