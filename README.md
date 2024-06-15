@@ -153,6 +153,8 @@
 2. Restarting
 3. CrashLoopBackOff
 4. ErrorImagePull
+5. Error
+6. pending
 
 ### Do we create PODS directly on Kubernetes Cluster ???
 
