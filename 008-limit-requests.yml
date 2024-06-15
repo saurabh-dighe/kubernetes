@@ -13,9 +13,8 @@ spec:
       limits:
         memory: "128Mi"
         cpu: "500m"
-
   - name: log-aggregator
-    image: httpd
+    image: nginx
     resources:
       requests:
         memory: "64Mi"
