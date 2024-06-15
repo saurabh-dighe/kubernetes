@@ -6,12 +6,12 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: nginx
-    strategy: 
-      type: Recreate
+  strategy: 
+    type: Recreate
   template:
     metadata:
       labels:
