@@ -4,13 +4,13 @@ metadata:
   name: frontend-set
   labels:
     app: guestbook
-    tier: frontend
+    tier: frontend-s
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-      tier: frontend
+      tier: frontend-s
   template:
     metadata:
       labels:
