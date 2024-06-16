@@ -1,9 +1,9 @@
-#Namespace
+#Namespace for payment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: payment-app
-  namespace: kube-system
+  namespace: payment
   labels:
     app: payment
 spec:
@@ -27,11 +27,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: user-svc
-  namespace: user
+  name: payment-svc
+  namespace: payment
 spec:
   selector:
-    app: user
+    app: payment
   ports:
     - protocol: TCP
       port: 80
@@ -39,7 +39,7 @@ spec:
 
 ---
 
-#Namespace
+#Namespace for user
 apiVersion: apps/v1
 kind: Deployment
 metadata:
