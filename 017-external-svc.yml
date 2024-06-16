@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-3-deployment
+  labels:
+    app: httpd-3
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: httpd-3
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+     maxUnavailable: 2
+  template:
+    metadata:
+      labels:
+        app: httpd-3
+    spec:
+      containers:
+      - name: httpd-3
+        image: httpd
+        ports:
+        - containerPort: 80
+
+---
+#External service
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-cassandra
+spec:
+  selector:
+    app: httpd-3
+  type: ExternalName
+  externalName: my-cassandra.gvp.roboshop.internal

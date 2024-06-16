@@ -51,6 +51,7 @@ spec:
         - containerPort: 80
 
 ---
+#ClusterIp service
 
 apiVersion: v1
 kind: Service
