@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc
+  name: nginx-2-svc
 spec:
   selector:
-    app: nginx
+    app: nginx-2
   ports:
     - protocol: TCP
       port: 80
@@ -15,14 +15,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-2-deployment
   labels:
-    app: nginx
+    app: nginx-2
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-2
   strategy: 
     type: RollingUpdate
     rollingUpdate:
@@ -30,10 +30,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-2
     spec:
       containers:
-      - name: nginx
+      - name: nginx-2
         image: nginx
         ports:
         - containerPort: 80
