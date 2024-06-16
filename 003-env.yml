@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: nginx-cnter
-    image: curlimages 
+    image: curlimages/curl 
     command: sh sleep 600
     ports:
       - containerPort: 80
