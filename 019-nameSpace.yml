@@ -77,3 +77,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+
+
+# <serviceName>.<nameSpace>.svc.cluster.local
+# curl user-svc.user.svc.cluster.local
