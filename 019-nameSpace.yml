@@ -23,14 +23,56 @@ spec:
         - containerPort: 80
 
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: payment-svc
-  namespace: kube-system
+  name: user-svc
+  namespace: user
 spec:
   selector:
-    app: payment
+    app: user
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+---
+
+#Namespace
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-app
+  namespace: user
+  labels:
+    app: user
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+      - name: user
+        image: httpd
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-svc
+  namespace: user
+spec:
+  selector:
+    app: user
   ports:
     - protocol: TCP
       port: 80
