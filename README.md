@@ -490,3 +490,11 @@ For example payment pod in payment wants to talk to cart pod in cart nameSpace ?
     $ In payment pod, refer cart svc as cart.cartns.svc.cluster.local
 
 ```
+# Topic need to covered externally
+
+Taints
+Tolerations
+Node Selectors
+Node Affinity
+Pod Affinity & Anti Affinity
+Pod Priority & Pre-emption
