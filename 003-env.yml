@@ -5,7 +5,8 @@ metadata:
 spec:
   containers:
   - name: nginx-cnter
-    image: nginx:latest 
+    image: centos7 
+    command: sh sleep 600
     ports:
       - containerPort: 80
     env:
