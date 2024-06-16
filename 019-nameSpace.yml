@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app: httpaymentpd
+        app: payment
     spec:
       containers:
       - name: payment
