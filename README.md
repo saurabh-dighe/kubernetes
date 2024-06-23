@@ -101,12 +101,11 @@
 ```
     It can created in 2 ways :
         1) Imperative    ( Not a suggested way : using kubectl commands )
-        2) Declarative   ( Suggested way : Version Controller and we use YAML )
+        2) Declarative   ( Suggested way : Version Controller and we use YAML manifest file)
 ```
 
 
-### How can we authenticat to kubernetes cluster ?
-
+### How can we authenticate to kubernetes cluster ?
 
 ```
     $ aws eks update-kubeconfig --name clusterName
