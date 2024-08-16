@@ -109,6 +109,8 @@
 
 ```
     $ aws eks update-kubeconfig --name clusterName
+
+    ====================================================================================================
 ```
 ### How to check where u connected to kubernetes cluster or not?
 
@@ -201,7 +203,7 @@ Services in kubernetes are used to pass the requests to the backend pods using t
 ```
     Typically we use this for Monitoring Agents!!!
 
-    Whenever you were landed in to a situation where you want to run a single POD on the top of each and eevery node of the cluster irrespective of the scale-out or scale-in.
+    Whenever you were landed in to a situation where you want to run a single POD on the top of each and every node of the cluster irrespective of the scale-out or scale-in.
 
 ```
 
@@ -256,28 +258,10 @@ Remember that **namespaces cannot be nested within each other**. They provide a 
 
     2) Always vertical scaling has a hard limit.
 
-
     3) Horizontal Scaling is adding the nodes rather resources on the top it.
 
     4) This won't have any downtime and at the same time they can scale-out and scale-in indefinitely.
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### What is Kubernetes ?
@@ -497,3 +481,13 @@ Node Selectors
 Node Affinity
 Pod Affinity & Anti Affinity
 Pod Priority & Pre-emption
+
+### Install Metric server on top of node
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+kubectl get deployment metrics-server -n kube-system
+
+kubectl top nods
+
+kubectl get hpa

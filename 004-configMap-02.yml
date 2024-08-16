@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm
+data:
+  db-port: "3306"
+  db-name: "Backend-DB"
+  db-url: "https://digdgid"
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: nginx-ctr
+    image: nginx:latest 
+    ports:
+      - containerPort: 80
+    volumeMounts:
+      - name: test-volume
+        mountPath: /opt
+        
+  volumes:
+    - name: test-volume
+      configMap:
+        name: cm
