@@ -29,7 +29,7 @@
     3) EKS : Elastic Kubernetes Service : Platform As A Service For Kubernetes on AWS ( Production Grade )
 ```
 
-### Can we created our own cluster manually ??? YES   [ Highlevel Steps ]
+### Can we create our own cluster manually ??? YES   [ Highlevel Steps ]
 
 ```
     1) Ensure you Linux Machines are available.
